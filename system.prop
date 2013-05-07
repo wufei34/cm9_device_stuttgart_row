@@ -1,0 +1,7 @@
+#
+# system.prop for stuttgart_row
+#
+
+rild.libpath=/system/lib/librapid-ril-core.so
+rild.libargs=-a /dev/gsmtty2 -n /dev/gsmtty3 -m /dev/gsmtty4 -c /dev/gsmtty6 -u /dev/gsmtty8 -d /dev/gsmtty10 -d /dev/gsmtty11
+ro.sf.lcd_density=320

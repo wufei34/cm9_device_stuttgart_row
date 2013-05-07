@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<glgps xmlns="http://www.glpals.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.glpals.com/glconfig.xsd" >
+  <!--HAL Confguration  -->
+  <hal
+       acPortName="/dev/ttySAC2"
+       lBaudRate="115200"
+       gpioNStdbyPath="/sys/devices/system/gpslenovo/regpu"
+       gpioNResetPath="/sys/devices/system/gpslenovo/reset"
+       gpioDelayMs="100"
+       acNvStoDir="/data/gps/"
+
+       cLogEnabled="false" 
+       acLogDirectory="/data/gps/log/"
+       gpslogdPipePath="/data/gps/.gpslogd.pipe"
+       ctrlPipe="/data/gps/glgpsctrl"
+
+       acNmeaOutName="/data/gpspipe"
+
+       arp-supl-enable="true"
+       arp-supl-cap-msb="true"
+       arp-supl-cap-msa="true"
+       arp-supl-cap-ecid="false"
+       arp-supl-use-apn="false"
+       acSuplServer="supl.google.com"
+       SuplPort="7276"
+       tlsCertPath="/system/bin/gps.cer"
+       tlsEnable="false"
+       ReAidingIntervalSec="1200"
+       SuplUT1Seconds="20"
+       SuplUT2Seconds="20"
+       SuplUT3Seconds="20"
+       SuplVersion="1"
+
+       LbsEnable="false"
+       LbsLocal="false"
+       LbsServer="lbs.glpals.com"
+       LbsPort="80"
+       LbsSyncLto="false"
+       SyncLto="true"
+       ltoFileName="lto2.dat"
+       acLtoDir="/data/gps/"
+       LbsSyncLtoThresholdDays="3"
+
+       IgnoreJniTime="true"
+       AssertEnabled="false"
+   />
+
+  <gll
+       LogPriMask="LOG_DEBUG"
+       LogFacMask="LOG_GLLAPI | LOG_DEVIA | LOG_NMEA | LOG_RAWDATA | LOG_DEVMS | LOG_ASIC_IO | LOG_BBTEST | LOG_DEVET | LOG_MESM | LOG_DEVKF | LOG_DEVJG | LOG_DEVMR" 
+       FrqPlan="FRQ_PLAN_16_369MHZ_2PPM"
+       RfType="GL_RF_4751_DANUBE_EXT_LNA"
+       WarmStandbyTimeout1Seconds="10"
+       WarmStandbyTimeout2Seconds="15"
+    >
+  </gll>
+  <gll_features
+       EnableLowPowerEls="false"
+       EnableLowPowerPmm="true"
+   />
+
+</glgps>
